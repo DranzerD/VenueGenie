@@ -1,0 +1,89 @@
+{
+  "current": "normal",
+  "description": "Current venue ambiance is set to normal operating mode with standard lighting and sound levels",
+  "events": [
+    {
+      "time": "14:00",
+      "description": "Venue opened for the day",
+      "ambiance": "normal"
+    },
+    {
+      "time": "15:30",
+      "description": "Conference setup completed in Main Hall",
+      "ambiance": "professional"
+    },
+    {
+      "time": "18:00",
+      "description": "Evening event preparation started",
+      "ambiance": "elegant"
+    },
+    {
+      "time": "19:30",
+      "description": "Main event begins - lighting adjusted",
+      "ambiance": "event"
+    },
+    {
+      "time": "22:00",
+      "description": "Event winding down - cleanup preparation",
+      "ambiance": "normal"
+    }
+  ],
+  "ambianceSettings": {
+    "normal": {
+      "lighting": "Full brightness",
+      "sound": "Background music at low volume",
+      "temperature": "72°F (22°C)"
+    },
+    "professional": {
+      "lighting": "Bright, focused on presentation areas",
+      "sound": "Minimal background, optimized for speech",
+      "temperature": "70°F (21°C)"
+    },
+    "elegant": {
+      "lighting": "Dimmed with accent lighting",
+      "sound": "Soft ambient music",
+      "temperature": "72°F (22°C)"
+    },
+    "event": {
+      "lighting": "Dynamic, event-specific",
+      "sound": "Event audio system active",
+      "temperature": "Adjusted based on occupancy"
+    },
+    "emergency": {
+      "lighting": "Emergency lighting only",
+      "sound": "Emergency announcements",
+      "temperature": "HVAC may be affected"
+    }
+  },
+  "timeline": {
+    "today": [
+      {
+        "time": "09:00-12:00",
+        "event": "Morning Workshop - Conference Room A",
+        "status": "completed"
+      },
+      {
+        "time": "14:00-17:00",
+        "event": "Business Conference - Grand Hall",
+        "status": "in_progress"
+      },
+      {
+        "time": "19:00-23:00",
+        "event": "Evening Gala - Banquet Hall",
+        "status": "upcoming"
+      }
+    ],
+    "upcoming": [
+      {
+        "date": "Tomorrow",
+        "events": 3,
+        "types": ["Wedding", "Corporate Meeting", "Training Session"]
+      },
+      {
+        "date": "This Week",
+        "events": 12,
+        "types": ["Various events scheduled"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Broadcast - VenueGenie</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        background-color: #1a1a1a;
+        color: #ffffff;
+      }
+      .broadcast-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .alert-banner {
+        background-color: #dc3545;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        display: none;
+      }
+      .alert-banner.active {
+        display: block;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+      }
+      .status-display {
+        background-color: #2d2d2d;
+        padding: 30px;
+        border-radius: 8px;
+        text-align: center;
+      }
+      .status-display h1 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="broadcast-container">
+      <div id="alert-banner" class="alert-banner">
+        🚨 EMERGENCY ALERT 🚨
+      </div>
+      <div class="status-display">
+        <h1>VenueGenie Broadcast</h1>
+        <p id="status-message">All systems operational</p>
+      </div>
+    </div>
+    
+    <script>
+      // Poll for alert status
+      async function checkAlertStatus() {
+        try {
+          const response = await fetch('/api/alert-status');
+          const data = await response.json();
+          
+          const alertBanner = document.getElementById('alert-banner');
+          const statusMessage = document.getElementById('status-message');
+          
+          if (data.activeAlert) {
+            alertBanner.classList.add('active');
+            alertBanner.textContent = `🚨 ${data.message} 🚨`;
+            statusMessage.textContent = 'EMERGENCY ALERT ACTIVE';
+            statusMessage.style.color = '#dc3545';
+          } else {
+            alertBanner.classList.remove('active');
+            statusMessage.textContent = 'All systems operational';
+            statusMessage.style.color = '#28a745';
+          }
+        } catch (error) {
+          console.error('Error fetching alert status:', error);
+        }
+      }
+      
+      // Poll every 2 seconds
+      checkAlertStatus();
+      setInterval(checkAlertStatus, 2000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "venues": [
+    {
+      "id": 1,
+      "name": "Grand Hall",
+      "capacity": 500,
+      "features": ["Stage", "Sound System", "Lighting", "Air Conditioning"],
+      "description": "Our largest venue perfect for concerts, conferences, and large gatherings"
+    },
+    {
+      "id": 2,
+      "name": "Conference Room A",
+      "capacity": 50,
+      "features": ["Projector", "Whiteboard", "Video Conferencing", "WiFi"],
+      "description": "Ideal for business meetings and presentations"
+    },
+    {
+      "id": 3,
+      "name": "Banquet Hall",
+      "capacity": 200,
+      "features": ["Kitchen Access", "Tables & Chairs", "Dance Floor", "Bar Area"],
+      "description": "Perfect for weddings, parties, and social events"
+    },
+    {
+      "id": 4,
+      "name": "Outdoor Garden",
+      "capacity": 150,
+      "features": ["Natural Lighting", "Garden Setting", "Covered Area", "Parking"],
+      "description": "Beautiful outdoor space for ceremonies and receptions"
+    }
+  ],
+  "emergencyProcedures": {
+    "fire": "In case of fire: 1) Activate nearest fire alarm 2) Evacuate using nearest exit 3) Proceed to assembly point 4) Call 911 5) Do not use elevators 6) Close doors behind you",
+    "medical": "In case of medical emergency: 1) Call 911 immediately 2) Do not move injured person unless necessary 3) Provide first aid if trained 4) Wait for emergency services 5) Keep patient calm and comfortable",
+    "security": "In case of security threat: 1) Alert security personnel immediately 2) Move to secure location 3) Lock doors if safe to do so 4) Call 911 for serious threats 5) Follow staff instructions 6) Do not confront threat",
+    "evacuation": "Evacuation procedures: 1) Stay calm 2) Follow exit signs 3) Use stairs, not elevators 4) Assist others if possible 5) Go to designated assembly point 6) Wait for all-clear from authorities",
+    "other": "For any other emergency: 1) Stay calm 2) Contact venue staff 3) Call appropriate emergency services 4) Follow instructions from authorities"
+  },
+  "contacts": {
+    "security": "+1-555-0100",
+    "management": "+1-555-0101",
+    "emergency": "911",
+    "facilities": "+1-555-0102"
+  }
+}

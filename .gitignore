@@ -1,0 +1,19 @@
+node_modules/
+.env
+dist/
+build/
+*.log
+.DS_Store
+coverage/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backend specific
+backend/node_modules/
+
+# Frontend specific
+frontend/node_modules/
+frontend/build/
