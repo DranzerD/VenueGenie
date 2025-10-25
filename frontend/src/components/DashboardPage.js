@@ -4,7 +4,6 @@ import ConfirmEmergency from './ConfirmEmergency';
 import './DashboardPage.css';
 
 function DashboardPage() {
-  const [alerts, setAlerts] = useState([]);
   const [currentAlert, setCurrentAlert] = useState(null);
   const [showConfirmDialog, setShowConfirmDialog] = useState(false);
   const [ambiance, setAmbiance] = useState(null);

@@ -10,3 +10,10 @@ coverage/
 *.swp
 *.swo
 *~
+
+# Backend specific
+backend/node_modules/
+
+# Frontend specific
+frontend/node_modules/
+frontend/build/
